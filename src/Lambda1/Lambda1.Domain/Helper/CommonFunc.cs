@@ -50,6 +50,21 @@
             return result.ToArray();
         }
 
+        static public string[] GetValues4(string[] values, Predicate<string> lenCheck)
+        {
+            var result = new List<string>();
+
+            foreach (var value in values)
+            {
+                if (lenCheck(value))
+                {
+                    result.Add(value);
+                }
+            }
+
+            return result.ToArray();
+        }
+
         static public bool CheckLength1(string value)
         {
             return value.Length == 3;
