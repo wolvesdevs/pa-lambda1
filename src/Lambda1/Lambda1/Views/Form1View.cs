@@ -1,10 +1,11 @@
+using Lambda1.Domain.Helper;
 using System.Diagnostics;
 
-namespace Lambda1
+namespace Lambda1.UI
 {
-    public partial class Form1 : Form
+    public partial class Form1View : Form
     {
-        public Form1()
+        public Form1View()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
@@ -14,15 +15,7 @@ namespace Lambda1
         {
             // #03 ƒ‰ƒ€ƒ_‚È‚µ‚ÅŽÀ‘•
             var values = new string[] { "A", "BB", "CCC", "DDDD", "EEEEE" };
-            var result = new List<string>();
-
-            foreach (var value in values)
-            {
-                if (value.Length >= 3)
-                {
-                    result.Add(value);
-                }
-            }
+            var result = CommonFunc.GetValues(values, 3);
 
             Debug.WriteLine(string.Join(", ", result));
         }

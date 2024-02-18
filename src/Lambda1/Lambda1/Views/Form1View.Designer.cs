@@ -1,6 +1,6 @@
-﻿namespace Lambda1
+﻿namespace Lambda1.UI
 {
-    partial class Form1
+    partial class Form1View
     {
         /// <summary>
         ///  Required designer variable.
