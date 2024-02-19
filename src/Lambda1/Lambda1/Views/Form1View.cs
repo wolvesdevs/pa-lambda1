@@ -114,5 +114,13 @@ namespace Lambda1.UI
         {
             Debug.WriteLine(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"));
         }
+
+        private void CollectionButton_Click(object sender, EventArgs e)
+        {
+            var values = new List<string> { "ABCDE", "AAAA", "BBBB", "CCCC", "DDD" };
+
+            var result1 = values.Find(x => x.Contains("B"));
+            Debug.WriteLine($"result1: {string.Join(", ", result1)}");
+        }
     }
 }

@@ -39,6 +39,7 @@
             Func2Button = new Button();
             ActionButton = new Button();
             Action2Button = new Button();
+            CollectionButton = new Button();
             SuspendLayout();
             // 
             // button1
@@ -151,11 +152,22 @@
             Action2Button.UseVisualStyleBackColor = true;
             Action2Button.Click += Action2Button_Click;
             // 
+            // CollectionButton
+            // 
+            CollectionButton.Location = new Point(558, 12);
+            CollectionButton.Name = "CollectionButton";
+            CollectionButton.Size = new Size(151, 40);
+            CollectionButton.TabIndex = 11;
+            CollectionButton.Text = "Collection";
+            CollectionButton.UseVisualStyleBackColor = true;
+            CollectionButton.Click += CollectionButton_Click;
+            // 
             // Form1View
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(642, 356);
+            ClientSize = new Size(838, 356);
+            Controls.Add(CollectionButton);
             Controls.Add(Action2Button);
             Controls.Add(ActionButton);
             Controls.Add(Func2Button);
@@ -185,5 +197,6 @@
         private Button Func2Button;
         private Button ActionButton;
         private Button Action2Button;
+        private Button CollectionButton;
     }
 }
