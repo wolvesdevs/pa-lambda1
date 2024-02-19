@@ -40,6 +40,7 @@
             ActionButton = new Button();
             Action2Button = new Button();
             CollectionButton = new Button();
+            Lambda2Button = new Button();
             SuspendLayout();
             // 
             // button1
@@ -162,11 +163,22 @@
             CollectionButton.UseVisualStyleBackColor = true;
             CollectionButton.Click += CollectionButton_Click;
             // 
+            // Lambda2Button
+            // 
+            Lambda2Button.Location = new Point(558, 71);
+            Lambda2Button.Name = "Lambda2Button";
+            Lambda2Button.Size = new Size(151, 40);
+            Lambda2Button.TabIndex = 12;
+            Lambda2Button.Text = "Lambda2";
+            Lambda2Button.UseVisualStyleBackColor = true;
+            Lambda2Button.Click += Lambda2Button_Click;
+            // 
             // Form1View
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(838, 356);
+            Controls.Add(Lambda2Button);
             Controls.Add(CollectionButton);
             Controls.Add(Action2Button);
             Controls.Add(ActionButton);
@@ -198,5 +210,6 @@
         private Button ActionButton;
         private Button Action2Button;
         private Button CollectionButton;
+        private Button Lambda2Button;
     }
 }

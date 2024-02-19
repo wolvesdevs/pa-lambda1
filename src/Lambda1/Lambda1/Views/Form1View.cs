@@ -149,5 +149,18 @@ namespace Lambda1.UI
             var result9 = values.Where(x => x.Contains("X")).FirstOrDefault();
             Debug.WriteLine($"result9: {string.Join(", ", result9)}");
         }
+
+        private void Lambda2Button_Click(object sender, EventArgs e)
+        {
+            var products = new List<Product>
+            {
+                new Product(1, "p1"),
+                new Product(2, "p2"),
+                new Product(3, "p31")
+            };
+
+            var result1 = products.Find(x => x.ProductId == 2);
+            Debug.WriteLine($"result1: {result1.ProductName}");
+        }
     }
 }
