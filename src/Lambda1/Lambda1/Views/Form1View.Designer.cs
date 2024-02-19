@@ -35,6 +35,12 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            button8 = new Button();
+            Func2Button = new Button();
+            ActionButton = new Button();
+            Action2Button = new Button();
+            CollectionButton = new Button();
+            Lambda2Button = new Button();
             SuspendLayout();
             // 
             // button1
@@ -107,11 +113,77 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
+            // button8
+            // 
+            button8.Location = new Point(375, 12);
+            button8.Name = "button8";
+            button8.Size = new Size(151, 40);
+            button8.TabIndex = 7;
+            button8.Text = "Func";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // Func2Button
+            // 
+            Func2Button.Location = new Point(375, 71);
+            Func2Button.Name = "Func2Button";
+            Func2Button.Size = new Size(151, 40);
+            Func2Button.TabIndex = 8;
+            Func2Button.Text = "Func2";
+            Func2Button.UseVisualStyleBackColor = true;
+            Func2Button.Click += Func2Button_Click;
+            // 
+            // ActionButton
+            // 
+            ActionButton.Location = new Point(375, 134);
+            ActionButton.Name = "ActionButton";
+            ActionButton.Size = new Size(151, 40);
+            ActionButton.TabIndex = 9;
+            ActionButton.Text = "Action";
+            ActionButton.UseVisualStyleBackColor = true;
+            ActionButton.Click += ActionButton_Click;
+            // 
+            // Action2Button
+            // 
+            Action2Button.Location = new Point(375, 196);
+            Action2Button.Name = "Action2Button";
+            Action2Button.Size = new Size(151, 40);
+            Action2Button.TabIndex = 10;
+            Action2Button.Text = "Action2";
+            Action2Button.UseVisualStyleBackColor = true;
+            Action2Button.Click += Action2Button_Click;
+            // 
+            // CollectionButton
+            // 
+            CollectionButton.Location = new Point(558, 12);
+            CollectionButton.Name = "CollectionButton";
+            CollectionButton.Size = new Size(151, 40);
+            CollectionButton.TabIndex = 11;
+            CollectionButton.Text = "Collection";
+            CollectionButton.UseVisualStyleBackColor = true;
+            CollectionButton.Click += CollectionButton_Click;
+            // 
+            // Lambda2Button
+            // 
+            Lambda2Button.Location = new Point(558, 71);
+            Lambda2Button.Name = "Lambda2Button";
+            Lambda2Button.Size = new Size(151, 40);
+            Lambda2Button.TabIndex = 12;
+            Lambda2Button.Text = "Lambda2";
+            Lambda2Button.UseVisualStyleBackColor = true;
+            Lambda2Button.Click += Lambda2Button_Click;
+            // 
             // Form1View
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(642, 356);
+            ClientSize = new Size(838, 356);
+            Controls.Add(Lambda2Button);
+            Controls.Add(CollectionButton);
+            Controls.Add(Action2Button);
+            Controls.Add(ActionButton);
+            Controls.Add(Func2Button);
+            Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -133,5 +205,11 @@
         private Button button5;
         private Button button6;
         private Button button7;
+        private Button button8;
+        private Button Func2Button;
+        private Button ActionButton;
+        private Button Action2Button;
+        private Button CollectionButton;
+        private Button Lambda2Button;
     }
 }

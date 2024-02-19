@@ -3,7 +3,7 @@
     public static class CommonFunc
     {
         public delegate bool LenCheck(string value);
-        public delegate bool LenCheck5(string value, int len);
+        public delegate bool LenCheck3(string value, int len);
 
         static public string[] GetValues(string[] values, int length)
         {
@@ -35,7 +35,7 @@
             return result.ToArray();
         }
 
-        static public string[] GetValues3(string[] values, int len, LenCheck5 lenCheck)
+        static public string[] GetValues3(string[] values, int len, LenCheck3 lenCheck)
         {
             var result = new List<string>();
 
@@ -65,6 +65,21 @@
             return result.ToArray();
         }
 
+        static public string[] GetValues5(string[] values, int len, Func<string, int, bool> lenCheck)
+        {
+            var result = new List<string>();
+
+            foreach (var value in values)
+            {
+                if (lenCheck(value, len))
+                {
+                    result.Add(value);
+                }
+            }
+
+            return result.ToArray();
+        }
+
         static public bool CheckLength1(string value)
         {
             return value.Length == 3;
@@ -83,6 +98,34 @@
         static public bool CheckLength4(string value, int len)
         {
             return value.Length >= len;
+        }
+
+        static public List<string> GetData(Action<int> progressAction)
+        {
+            var result = new List<string>();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                result.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"));
+                Thread.Sleep(1000);
+                progressAction(i * 20);
+            }
+
+            return result;
+        }
+
+        static public List<string> GetData2(Action progressAction)
+        {
+            var result = new List<string>();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                result.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"));
+                Thread.Sleep(1000);
+                progressAction();
+            }
+
+            return result;
         }
     }
 }
