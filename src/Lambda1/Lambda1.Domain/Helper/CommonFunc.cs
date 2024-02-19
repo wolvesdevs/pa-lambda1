@@ -99,5 +99,19 @@
         {
             return value.Length >= len;
         }
+
+        static public List<string> GetData(Action<int> progressAction)
+        {
+            var result = new List<string>();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                result.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"));
+                Thread.Sleep(1000);
+                progressAction(i * 20);
+            }
+
+            return result;
+        }
     }
 }

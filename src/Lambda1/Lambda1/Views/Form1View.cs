@@ -99,5 +99,10 @@ namespace Lambda1.UI
 
             Debug.WriteLine(string.Join(", ", result));
         }
+
+        private void ActionButton_Click(object sender, EventArgs e)
+        {
+            CommonFunc.GetData(value => Debug.WriteLine($"{value}%"));
+        }
     }
 }

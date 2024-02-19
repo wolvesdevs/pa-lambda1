@@ -37,6 +37,7 @@
             button7 = new Button();
             button8 = new Button();
             Func2Button = new Button();
+            ActionButton = new Button();
             SuspendLayout();
             // 
             // button1
@@ -111,7 +112,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(196, 196);
+            button8.Location = new Point(375, 12);
             button8.Name = "button8";
             button8.Size = new Size(151, 40);
             button8.TabIndex = 7;
@@ -121,7 +122,7 @@
             // 
             // Func2Button
             // 
-            Func2Button.Location = new Point(196, 257);
+            Func2Button.Location = new Point(375, 71);
             Func2Button.Name = "Func2Button";
             Func2Button.Size = new Size(151, 40);
             Func2Button.TabIndex = 8;
@@ -129,11 +130,22 @@
             Func2Button.UseVisualStyleBackColor = true;
             Func2Button.Click += Func2Button_Click;
             // 
+            // ActionButton
+            // 
+            ActionButton.Location = new Point(375, 134);
+            ActionButton.Name = "ActionButton";
+            ActionButton.Size = new Size(151, 40);
+            ActionButton.TabIndex = 9;
+            ActionButton.Text = "Action";
+            ActionButton.UseVisualStyleBackColor = true;
+            ActionButton.Click += ActionButton_Click;
+            // 
             // Form1View
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(642, 356);
+            Controls.Add(ActionButton);
             Controls.Add(Func2Button);
             Controls.Add(button8);
             Controls.Add(button7);
@@ -159,5 +171,6 @@
         private Button button7;
         private Button button8;
         private Button Func2Button;
+        private Button ActionButton;
     }
 }
