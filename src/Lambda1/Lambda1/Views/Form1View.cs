@@ -164,6 +164,9 @@ namespace Lambda1.UI
 
             var result2 = products.FindAll(x => x.ProductName.Contains("1"));
             Debug.WriteLine($"result2: {string.Join(", ", result2.Select(x => x.ProductName))}");
+
+            var result3 = products.Exists(x => x.ProductId == 2);
+            Debug.WriteLine($"result3: {string.Join(", ", result3)}");
         }
     }
 }
