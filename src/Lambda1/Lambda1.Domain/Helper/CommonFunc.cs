@@ -3,7 +3,7 @@
     public static class CommonFunc
     {
         public delegate bool LenCheck(string value);
-        public delegate bool LenCheck5(string value, int len);
+        public delegate bool LenCheck3(string value, int len);
 
         static public string[] GetValues(string[] values, int length)
         {
@@ -35,7 +35,7 @@
             return result.ToArray();
         }
 
-        static public string[] GetValues3(string[] values, int len, LenCheck5 lenCheck)
+        static public string[] GetValues3(string[] values, int len, LenCheck3 lenCheck)
         {
             var result = new List<string>();
 
@@ -57,6 +57,21 @@
             foreach (var value in values)
             {
                 if (lenCheck(value))
+                {
+                    result.Add(value);
+                }
+            }
+
+            return result.ToArray();
+        }
+
+        static public string[] GetValues5(string[] values, int len, Func<string, int, bool> lenCheck)
+        {
+            var result = new List<string>();
+
+            foreach (var value in values)
+            {
+                if (lenCheck(value, len))
                 {
                     result.Add(value);
                 }
