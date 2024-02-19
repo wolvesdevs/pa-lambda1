@@ -113,5 +113,19 @@
 
             return result;
         }
+
+        static public List<string> GetData2(Action progressAction)
+        {
+            var result = new List<string>();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                result.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"));
+                Thread.Sleep(1000);
+                progressAction();
+            }
+
+            return result;
+        }
     }
 }

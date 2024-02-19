@@ -104,5 +104,15 @@ namespace Lambda1.UI
         {
             CommonFunc.GetData(value => Debug.WriteLine($"{value}%"));
         }
+
+        private void Action2Button_Click(object sender, EventArgs e)
+        {
+            CommonFunc.GetData2(() => Debug.WriteLine(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff")));
+        }
+
+        private void Test()
+        {
+            Debug.WriteLine(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"));
+        }
     }
 }
