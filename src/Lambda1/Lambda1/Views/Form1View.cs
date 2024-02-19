@@ -160,13 +160,39 @@ namespace Lambda1.UI
             };
 
             var result1 = products.Find(x => x.ProductId == 2);
-            Debug.WriteLine($"result1: {result1.ProductName}");
+            if (result1 != null)
+            {
+                Debug.WriteLine($"result1: {result1.ProductName}");
+            }
+            else
+            {
+                Debug.WriteLine("result1: null");
+            }
 
             var result2 = products.FindAll(x => x.ProductName.Contains("1"));
             Debug.WriteLine($"result2: {string.Join(", ", result2.Select(x => x.ProductName))}");
 
             var result3 = products.Exists(x => x.ProductId == 2);
             Debug.WriteLine($"result3: {string.Join(", ", result3)}");
+
+            var result4 = products.Where(x => x.ProductName.Contains("1"));
+            Debug.WriteLine($"result4: {string.Join(", ", result4.Select(x => x.ProductName))}");
+
+            var result5 = products.Where(x => x.ProductName.Contains("2")).First();
+            Debug.WriteLine($"result5: {result5.ProductName}");
+
+            var result6 = products.Where(x => x.ProductName.Contains("ppp")).FirstOrDefault();
+            if (result6 != null)
+            {
+                Debug.WriteLine($"result6: {result6.ProductName}");
+            }
+            else
+            {
+                Debug.WriteLine("result6: null");
+            }
+
+            var result7 = products.Any(x => x.ProductId == 3);
+            Debug.WriteLine($"result7: {string.Join(", ", result7)}");
         }
     }
 }
