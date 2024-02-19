@@ -82,5 +82,22 @@ namespace Lambda1.UI
 
             Debug.WriteLine(string.Join(", ", result));
         }
+
+        private void Func2Button_Click(object sender, EventArgs e)
+        {
+            var values = new string[] { "A", "BB", "CCC", "DDDD", "EEEEE" };
+            var result = CommonFunc.GetValues5(values, 2,
+                (value, len) =>
+                {
+                    if (value[0] == 'E')
+                    {
+                        return value.Length > len;
+                    }
+
+                    return false;
+                });
+
+            Debug.WriteLine(string.Join(", ", result));
+        }
     }
 }

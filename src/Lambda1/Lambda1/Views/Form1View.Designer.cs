@@ -36,6 +36,7 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            Func2Button = new Button();
             SuspendLayout();
             // 
             // button1
@@ -118,11 +119,22 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
+            // Func2Button
+            // 
+            Func2Button.Location = new Point(196, 257);
+            Func2Button.Name = "Func2Button";
+            Func2Button.Size = new Size(151, 40);
+            Func2Button.TabIndex = 8;
+            Func2Button.Text = "Func2";
+            Func2Button.UseVisualStyleBackColor = true;
+            Func2Button.Click += Func2Button_Click;
+            // 
             // Form1View
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(642, 356);
+            Controls.Add(Func2Button);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
@@ -146,5 +158,6 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private Button Func2Button;
     }
 }
