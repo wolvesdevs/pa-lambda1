@@ -124,6 +124,9 @@ namespace Lambda1.UI
 
             var result2 = values.FindAll(x => x.Contains("B"));
             Debug.WriteLine($"result2: {string.Join(", ", result2)}");
+
+            var result3 = values.Exists(x => x.Contains("B"));
+            Debug.WriteLine($"result3: {string.Join(", ", result3)}");
         }
     }
 }
