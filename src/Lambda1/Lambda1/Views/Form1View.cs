@@ -139,9 +139,12 @@ namespace Lambda1.UI
             result6 = result6.Where(x => x.Contains("EEEB"));
             Debug.WriteLine($"result6: {string.Join(", ", result6)}");
 
-            var result7 = (values.Where(x => x.Contains("B"))).ToList();
+            var result7 = values.Where(x => x.Contains("B")).ToList();
             values.Add("EEEB2");
             Debug.WriteLine($"result7: {string.Join(", ", result7)}");
+
+            var result8 = values.Any(x => x.Contains("X"));
+            Debug.WriteLine($"result8: {string.Join(", ", result8)}");
         }
     }
 }
