@@ -145,6 +145,9 @@ namespace Lambda1.UI
 
             var result8 = values.Any(x => x.Contains("X"));
             Debug.WriteLine($"result8: {string.Join(", ", result8)}");
+
+            var result9 = values.Where(x => x.Contains("X")).FirstOrDefault();
+            Debug.WriteLine($"result9: {string.Join(", ", result9)}");
         }
     }
 }
